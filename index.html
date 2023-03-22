@@ -15,7 +15,7 @@
                 <canvas id="myChart" width="100" height="100"></canvas>
             </div>
 
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <table class="table table-striped">
                     <thead class="table-dark">
                         <tr>
@@ -29,6 +29,28 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <form>
+                <legend>Formulario</legend>
+                <div class="mb-3">
+                    <label for="inputNum" class="form-label">#</label>
+                    <input type="text" class="form-control" id="inputNum">
+                </div>
+                <div class="mb-3">
+                    <label for="inputNombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="inputNombre">
+                </div>
+                <div class="mb-3">
+                    <label for="inputMonto" class="form-label">Monto</label>
+                    <input type="text" class="form-control" id="inputMonto">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="add()" id="btnAdd">Agregar</button>
+                <button type="reset" class="btn btn-danger">Actualizar</button>
+            </form>
         </div>
     </div>
 
