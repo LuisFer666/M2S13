@@ -64,3 +64,28 @@ console.log("Entro index.js");
     loadData();
 
 })()
+
+function add(){
+    const BASE_URL = 'https://animales-api.onrender.com';
+
+    var inputNum = document.getElementById("inputNum");
+    var inputNombre = document.getElementById("inputNombre");
+    var inputMonto = document.getElementById("inputMonto");
+
+    console.log(inputNum.value, inputNombre.value, inputMonto.value);
+
+    fetch(BASE_URL + '/animales', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                id: inputNum.value,
+                nombre: inputNombre.value,
+                cantidad: inputMonto.value
+            })
+    })
+    .then( (response) => {
+        console.log("Respuesta: ",response);
+    });
+}
